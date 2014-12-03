@@ -1,0 +1,17 @@
+From 9e5ff225bd7ed68eb48b9f2fb272fbef04926ed9 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <michael.i.doherty@intel.com>
+Date: Fri, 17 Apr 2015 16:03:37 +0100
+Subject: [PATCH] Ensure configure is executable
+
+Signed-off-by: Ikey Doherty <michael.i.doherty@intel.com>
+---
+ configure | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ mode change 100644 => 100755 configure
+
+diff --git a/configure b/configure
+old mode 100644
+new mode 100755
+-- 
+1.9.1
+
