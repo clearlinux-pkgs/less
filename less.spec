@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 481
-Release  : 12
+Release  : 13
 URL      : http://www.greenwoodsoftware.com/less/less-481.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-481.tar.gz
 Summary  : No detailed summary available
