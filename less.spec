@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 487
-Release  : 16
+Release  : 17
 URL      : http://www.greenwoodsoftware.com/less/less-487.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-487.tar.gz
 Summary  : No detailed summary available
