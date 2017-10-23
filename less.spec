@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 520
-Release  : 18
+Release  : 19
 URL      : http://www.greenwoodsoftware.com/less/less-520.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-520.tar.gz
 Summary  : No detailed summary available
