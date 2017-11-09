@@ -1,0 +1,12 @@
+# This file contains recursive sources that require this package
+R
+audit
+comedilib
+docker
+filesystem
+flatpak
+gpgme
+gzip
+man-db
+man-pages
+swig
