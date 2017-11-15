@@ -11,7 +11,7 @@
 
 ======================================================================
 
-	Major changes between "less" versions 487 and 527
+	Major changes between "less" versions 487 and 529
 
 * Don't output terminal init sequence if using -F and file fits on one screen.
 
@@ -25,6 +25,8 @@
 * Status column (enabled via -J) now shows mark letters.
 
 * Status column shows search matches even if highlighting is disabled via -G.
+
+* A second ESC-u command will clear search match markers in the status column.
 
 * Do same ANSI escape code filtering for tag matching that we do for 
   searching, to help when viewing syntax-highlighted code.
@@ -46,7 +48,7 @@
 * Update Unicode tables to 2017-03-08.
 
 * Pass-thru Unicode formating chars (Cf type) instead of treating them
-  as binary chars.
+  as binary chars. But treat them as binary if -U is set.
 
 * Fix erroneous binary file warning when UTF-8 file contains ANSI SGR sequences.
 
