@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 529
-Release  : 21
+Release  : 22
 URL      : http://www.greenwoodsoftware.com/less/less-529.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-529.tar.gz
 Summary  : No detailed summary available
