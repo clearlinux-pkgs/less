@@ -1,12 +1,17 @@
 # This file contains recursive sources that require this package
 R
+apache-spark
 audit
 comedilib
 docker
 filesystem
 flatpak
+gmime
 gpgme
 gzip
+hamlib
 man-db
 man-pages
+notmuch
 swig
+volume_key
