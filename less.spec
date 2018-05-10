@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 530
-Release  : 23
+Release  : 24
 URL      : http://www.greenwoodsoftware.com/less/less-530.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-530.tar.gz
 Summary  : No detailed summary available
