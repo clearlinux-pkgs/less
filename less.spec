@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 550
-Release  : 27
+Release  : 28
 URL      : http://www.greenwoodsoftware.com/less/less-550.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-550.tar.gz
 Summary  : No detailed summary available
