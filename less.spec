@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 563
-Release  : 30
+Release  : 32
 URL      : http://www.greenwoodsoftware.com/less/less-563.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-563.tar.gz
 Summary  : No detailed summary available
@@ -14,6 +14,7 @@ Requires: less-bin = %{version}-%{release}
 Requires: less-license = %{version}-%{release}
 Requires: less-man = %{version}-%{release}
 BuildRequires : ncurses-dev
+BuildRequires : pcre2-dev
 Patch1: exec-configure.patch
 
 %description
@@ -56,13 +57,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1604098683
+export SOURCE_DATE_EPOCH=1606235051
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
 export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
-%configure --disable-static
+%configure --disable-static --with-regex=pcre2
 make  %{?_smp_mflags}
 
 %check
@@ -73,7 +74,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1604098683
+export SOURCE_DATE_EPOCH=1606235051
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/less
 cp %{_builddir}/less-563/COPYING %{buildroot}/usr/share/package-licenses/less/8624bcdae55baeef00cd11d5dfcfa60f68710a02
