@@ -4,7 +4,7 @@
 #
 Name     : less
 Version  : 563
-Release  : 32
+Release  : 33
 URL      : http://www.greenwoodsoftware.com/less/less-563.tar.gz
 Source0  : http://www.greenwoodsoftware.com/less/less-563.tar.gz
 Summary  : No detailed summary available
