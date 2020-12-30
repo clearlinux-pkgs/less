@@ -63,7 +63,7 @@ export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
 export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
-%configure --disable-static --with-regex=pcre2
+%configure --with-regex=pcre2
 make  %{?_smp_mflags}
 
 %check
