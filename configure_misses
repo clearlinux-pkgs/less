@@ -1,7 +1,7 @@
 Configure miss: initscr in -lxcurses
+Configure miss: library containing regcmp
+Configure miss: sys/stream.h
+Configure miss: sys/stream.h presence
+Configure miss: sys/stream.h usability
 Configure miss: tgetent in -ltermcap
 Configure miss: tgetent in -ltermlib
-Configure miss: library containing regcmp
-Configure miss: sys/stream.h usability
-Configure miss: sys/stream.h presence
-Configure miss: sys/stream.h

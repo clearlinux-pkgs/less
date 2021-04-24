@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 R
-calc
 clr-init
 gzip
 man-db
