@@ -11,7 +11,7 @@
 
 ======================================================================
 
-	Major changes between "less" versions 581 and 586
+	Major changes between "less" versions 581 and 589
 
 * Make less able to read lesskey source files (deprecating lesskey).
 
@@ -24,6 +24,8 @@
 * Add the --lesskey-src option.
 
 * Add the --file-size option.
+
+* With -F, if screen is resized to make file fit on one screen, don't exit.
 
 * Fix bug which could leave terminal in mouse-reporting mode 
   after exiting less.
