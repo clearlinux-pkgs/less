@@ -1,5 +1,6 @@
 Configure miss: initscr in -lxcurses
 Configure miss: library containing regcmp
+Configure miss: procfs
 Configure miss: sys/stream.h
 Configure miss: sys/stream.h presence
 Configure miss: sys/stream.h usability
