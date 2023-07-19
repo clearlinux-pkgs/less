@@ -5,7 +5,7 @@
 #
 Name     : less
 Version  : 633
-Release  : 42
+Release  : 43
 URL      : https://www.greenwoodsoftware.com/less/less-633.tar.gz
 Source0  : https://www.greenwoodsoftware.com/less/less-633.tar.gz
 Summary  : No detailed summary available
@@ -54,14 +54,14 @@ man components for the less package.
 %prep
 %setup -q -n less-633
 cd %{_builddir}/less-633
-%patch1 -p1
+%patch -P 1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683159222
+export SOURCE_DATE_EPOCH=1689800854
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -71,7 +71,7 @@ export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -f
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1683159222
+export SOURCE_DATE_EPOCH=1689800854
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/less
 cp %{_builddir}/less-%{version}/COPYING %{buildroot}/usr/share/package-licenses/less/31a3d460bb3c7d98845187c716a30db81c44b615 || :
