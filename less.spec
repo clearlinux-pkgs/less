@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : less
-Version  : 633
-Release  : 43
-URL      : https://www.greenwoodsoftware.com/less/less-633.tar.gz
-Source0  : https://www.greenwoodsoftware.com/less/less-633.tar.gz
+Version  : 643
+Release  : 44
+URL      : https://www.greenwoodsoftware.com/less/less-643.tar.gz
+Source0  : https://www.greenwoodsoftware.com/less/less-643.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
@@ -52,16 +52,19 @@ man components for the less package.
 
 
 %prep
-%setup -q -n less-633
-cd %{_builddir}/less-633
+%setup -q -n less-643
+cd %{_builddir}/less-643
 %patch -P 1 -p1
+pushd ..
+cp -a less-643 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689800854
+export SOURCE_DATE_EPOCH=1692024998
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -70,18 +73,35 @@ export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -f
 %configure --disable-static --with-regex=pcre2
 make  %{?_smp_mflags}
 
+unset PKG_CONFIG_PATH
+pushd ../buildavx2/
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
+export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3"
+export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3"
+%configure --disable-static --with-regex=pcre2
+make  %{?_smp_mflags}
+popd
 %install
-export SOURCE_DATE_EPOCH=1689800854
+export SOURCE_DATE_EPOCH=1692024998
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/less
 cp %{_builddir}/less-%{version}/COPYING %{buildroot}/usr/share/package-licenses/less/31a3d460bb3c7d98845187c716a30db81c44b615 || :
+pushd ../buildavx2/
+%make_install_v3
+popd
 %make_install
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
 
 %files bin
 %defattr(-,root,root,-)
+/V3/usr/bin/less
+/V3/usr/bin/lessecho
+/V3/usr/bin/lesskey
 /usr/bin/less
 /usr/bin/lessecho
 /usr/bin/lesskey
