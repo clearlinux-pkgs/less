@@ -1,3 +1,5 @@
+Configure miss: gcc option to enable large file support
+Configure miss: gcc option to enable large file support
 Configure miss: initscr in -lxcurses
 Configure miss: initscr in -lxcurses
 Configure miss: library containing regcmp
@@ -6,8 +8,6 @@ Configure miss: ncurses/termcap.h
 Configure miss: ncurses/termcap.h
 Configure miss: ncursesw/termcap.h
 Configure miss: ncursesw/termcap.h
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
 Configure miss: sys/stream.h
 Configure miss: sys/stream.h
 Configure miss: tgetent in -ltermcap

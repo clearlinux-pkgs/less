@@ -1,5 +1,5 @@
 PKG_NAME := less
-URL = https://www.greenwoodsoftware.com/less/less-643.tar.gz
+URL = https://www.greenwoodsoftware.com/less/less-661.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
