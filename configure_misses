@@ -1,5 +1,7 @@
 Configure miss: gcc option to enable large file support
 Configure miss: gcc option to enable large file support
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: initscr in -lxcurses
 Configure miss: initscr in -lxcurses
 Configure miss: library containing regcmp
